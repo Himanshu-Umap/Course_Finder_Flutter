@@ -1,3 +1,4 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
 
@@ -15,11 +16,17 @@ class Navbar extends StatelessWidget {
           appBar: AppBar(
             scrolledUnderElevation: 10.0,
             leading: const Icon(Icons.find_in_page),
-            title: const Row(
+            title: Row(
               children:[ 
                 Text("Course Finder"),
                 SizedBox(width: 50,),
-                Text("ABOUT Us", style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700),),
+                InkWell(
+                  onTap: () {
+                    print('Text Clicked');
+                  },
+                  child: Text("ABOUT Us", style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700),
+                    ),
+                ),
                 SizedBox(width: 32,),
                 Text("CATALOG", style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400)),
                 SizedBox(width: 32,),
@@ -31,6 +38,13 @@ class Navbar extends StatelessWidget {
                 SizedBox(width: 32,),
                 Text("CONTACT", style: TextStyle(fontSize: 10, fontWeight: FontWeight.w400)),
                 SizedBox(width: 32,),
+                Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'What do you want to learn ??',
+                    ),
+                  ),
+                )
               ],
             ),
           ),
