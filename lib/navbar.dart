@@ -14,7 +14,7 @@ class _NavbarState extends State<Navbar> {
       // elevation: 10,
       // shadowColor: Colors.blueAccent,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(60, 0, 60, 80),
+        padding: const EdgeInsets.fromLTRB(60, 4, 60, 80),
         child: Scaffold(
           appBar: AppBar(
             // scrolledUnderElevation: 10.0,
